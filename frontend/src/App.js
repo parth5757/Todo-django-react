@@ -55,11 +55,41 @@ class App extends Component {
         </span>
                 <span
           onClick={()=> this.displayCompleted(false)}
-          className={this.state.viewCompleted ? "active" : ""}
+          className={this.state.viewCompleted ? "active" : "active"} 
           Incompleted
         >
         </span>
       </div>
+    )
+  }
+
+  renderItems = () =>{
+    const { viewCompleted } = this.state;
+    const newItems  = this.state.taskList.filter(
+      item => item.completed == viewCompleted
+    );
+  };
+
+
+
+  render(){
+    return(
+      <main className="context">
+        <h1 className="text-black text-uppercase text-center my-4">Task Manager</h1>
+        <h1 className="row">
+          <div className="col-md-6 col-sma-10 mx-auto p-0">
+            <div className="card p-3">
+              <button className="btn btn-warning">Add Task</button>
+
+            </div>
+
+          </div>
+
+        </h1>
+
+
+
+      </main>
     )
   }
 
