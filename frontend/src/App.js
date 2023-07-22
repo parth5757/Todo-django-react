@@ -39,14 +39,27 @@ class App extends Component {
 
   displayCompleted = status => {
     if (status){
-      return this.setstatus{{ viewCompleted: true }};
+      return this.setstatus({ viewCompleted: true });
       }
-      return this.setstatus{{ viewCompleted: false }};
+      return this.setstatus({ viewCompleted: false });
   }
 
   renderTabList = () => {
     return(
-      
+      <div className="my-5-tab-list">
+        <span
+          onClick={()=> this.displayCompleted(true)}
+          className={this.state.viewCompleted ? "active" : ""}
+        >
+          Completed
+        </span>
+                <span
+          onClick={()=> this.displayCompleted(false)}
+          className={this.state.viewCompleted ? "active" : ""}
+          Incompleted
+        >
+        </span>
+      </div>
     )
   }
 
