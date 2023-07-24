@@ -104,6 +104,30 @@ import './App.css';
 
 const tasks = [
   // Your task objects here...
+  {
+      "id": 1,
+      "title": "parth's web",
+      "description": "-----",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Freelancing Work",
+      "description": "freelancing",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Job Searching",
+      "description": "search job on linkedin indeed nuakri",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "Job Searching",
+      "description": "search job on linkedin indeed nuakri",
+      "completed": false
+    },
 ];
 
 class App extends Component {
@@ -142,6 +166,13 @@ class App extends Component {
     )
   }
 
+  renderItems = () {
+    const { viewCompleted } =this.state;
+    const newItems  = this.state.taskList.filter(
+      item => item.completed == viewCompleted
+    )
+  }
+
   render() {
     return (
       <main className="context">
@@ -150,6 +181,10 @@ class App extends Component {
           <div className="col-md-6 col-sma-10 mx-auto p-0">
             <div className="card p-3">
               <button className="btn btn-warning">Add Task</button>
+              {this.renderTabList()}
+              <ul className="list-group list-group-flush">
+                {this.renderItems()}
+              </ul>
             </div>
           </div>
         </h1>
