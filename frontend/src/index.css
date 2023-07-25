@@ -24,3 +24,8 @@ body {
   background-color: rgb(13, 159, 204);
   color: #fff;
 }
+
+span{
+  margin: 15px;
+  padding: 20px;
+}
