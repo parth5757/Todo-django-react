@@ -11,10 +11,9 @@ Django
 - python mange.py migrate
 - python manage.py createsuperuser
 - pip install djangorestframework django-cors-headers
-- 
+
 
 React
 
 - npx create-react-app frontend
 - npm start
-- 
