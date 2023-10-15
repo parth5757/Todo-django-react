@@ -17,3 +17,7 @@ React
 
 - npx create-react-app frontend
 - npm start
+
+  
+<h3>Views</h3>
+<img src="https://profile-counter.glitch.me/jwt/count.svg">
